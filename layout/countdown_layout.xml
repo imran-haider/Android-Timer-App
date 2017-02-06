@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id ="@+id/countdown_layout"
+    android:background="#EE1289">
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custombutton"
+        android:text="Start"
+        android:id="@+id/button_start"
+        android:textColor="@color/white"
+        android:layout_margin="10dp"
+        android:shadowColor="#A8A8A8"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custombutton"
+        android:text="Pause"
+        android:id="@+id/button_pause"
+        android:textColor="@color/white"
+        android:layout_margin="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Set Time:"
+        android:textSize="25sp"
+        android:id="@+id/textView_SetTime"
+        android:textColor="@color/white"
+        android:onClick="showPickerDialog"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="55dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Elapsed:"
+        android:textSize="25sp"
+        android:id="@+id/textView_ElapsedTime"
+        android:textColor="@color/white"
+        android:layout_alignBaseline="@+id/chronometer"
+        android:layout_alignBottom="@+id/chronometer"
+        android:layout_alignEnd="@+id/textView_SetTime" />
+
+    <Chronometer
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/chronometer"
+        android:textSize="60sp"
+        android:textColor="@color/white"
+        android:layout_below="@+id/textView_SetTimeText"
+        android:layout_alignStart="@+id/button_start"
+        android:layout_marginTop="22dp" />
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custombutton"
+        android:text="Reset"
+        android:id="@+id/button_reset"
+        android:textColor="@color/white"
+        android:layout_margin="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView_SetTimeText"
+        android:textColor="@color/white"
+        android:textSize="25dp"
+        android:layout_alignBottom="@+id/textView_SetTime"
+        android:clickable="false"
+        android:layout_alignEnd="@+id/chronometer"
+        android:layout_alignStart="@+id/chronometer" />
+
+</RelativeLayout>
